@@ -7,11 +7,11 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY ./config /minecraft/config/
+COPY ./configs /minecraft/configs/
 COPY ./mods /minecraft/mods/
-COPY ./server.properties /minecraft/server.properties
-
 COPY ./server.jar /minecraft/server.jar
+COPY ./eula.txt /minecraft/eula.txt
+COPY ./server-icon.png /minecraft/server-icon.png
 
 EXPOSE 25565
 
