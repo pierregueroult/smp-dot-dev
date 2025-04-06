@@ -1,0 +1,18 @@
+FROM openjdk:17-slim
+
+WORKDIR /minecraft
+
+RUN apt-get update && \
+    apt-get install -y wget && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY ./config /minecraft/config/
+COPY ./mods /minecraft/mods/
+COPY ./server.properties /minecraft/server.properties
+
+COPY ./server.jar /minecraft/server.jar
+
+EXPOSE 25565
+
+CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "server.jar", "nogui"]
