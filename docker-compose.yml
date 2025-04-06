@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   minecraft:
     build:
@@ -10,3 +8,4 @@ services:
       - /data/minecraft/world:/minecraft/world
       - /data/minecraft/logs:/minecraft/logs
       - /data/minecraft/meta:/minecraft/
+    restart: no

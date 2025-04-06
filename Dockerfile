@@ -17,4 +17,6 @@ EXPOSE 25565
 
 RUN chmod +x /minecraft/server.jar
 
+RUN ls -la /minecraft
+
 CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "/minecraft/server.jar", "nogui"]
