@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY ./configs /minecraft/configs/
+COPY ./config /minecraft/config/
 COPY ./mods /minecraft/mods/
 COPY ./server.jar /minecraft/server.jar
 COPY ./eula.txt /minecraft/eula.txt
