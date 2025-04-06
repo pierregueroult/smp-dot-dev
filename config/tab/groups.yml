@@ -1,0 +1,16 @@
+# default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+_DEFAULT_:
+  tabprefix: "test - "
+  customtabname: "%player%"
+  tabsuffix: ""
+
+per-world:
+  world:
+    _DEFAUlT_:
+      tabprefix: "&2 [Overworld] &f"
+  world_nether:
+    _DEFAUlT_:
+      tabprefix: "&c [Nether] &f"
+  world_the_end:
+    _DEFAUlT_:
+      tabprefix: "&8 [The End] &f"
