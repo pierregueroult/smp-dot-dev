@@ -15,4 +15,6 @@ COPY ./server-icon.png /minecraft/server-icon.png
 
 EXPOSE 25565
 
+RUN chmod +x /minecraft/server.jar
+
 CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "/minecraft/server.jar", "nogui"]
