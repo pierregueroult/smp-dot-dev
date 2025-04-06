@@ -1,4 +1,4 @@
-FROM openjdk:17-slim
+FROM openjdk:21-slim
 
 WORKDIR /minecraft
 
@@ -15,4 +15,4 @@ COPY ./server-icon.png /minecraft/server-icon.png
 
 EXPOSE 25565
 
-CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "server.jar", "nogui"]
+CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "/minecraft/server.jar", "nogui"]
