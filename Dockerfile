@@ -31,4 +31,4 @@ USER minecraft
 RUN ls -la /minecraft
 
 # Lancer le serveur Minecraft
-CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "/minecraft/server.jar", "nogui"]
+CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "server.jar", "nogui"]
