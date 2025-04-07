@@ -19,4 +19,4 @@ EXPOSE 24454/udp
 
 RUN chmod +x /minecraft/launch.sh
 
-CMD ["/minecraft/launch.sh"]
+CMD ["./launch.sh"]
