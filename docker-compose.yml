@@ -8,7 +8,14 @@ services:
       - "25565:25565"
       - "24454:24454/udp"
     volumes:
-      - /data/minecraft/:/minecraft
+      - /data/minecraft/crash-reports:/minecraft/crash-reports
+      - /data/minecraft/logs:/minecraft/logs
+      - /data/minecraft/world:/minecraft/world
+      - /data/minecraft/ops.json:/minecraft/ops.json
+      - /data/minecraft/whitelist.json:/minecraft/whitelist.json
+      - /data/minecraft/server.properties:/minecraft/server.properties
+      - /data/minecraft/banned-ips.json:/minecraft/banned-ips.json
+      - /data/minecraft/banned-players.json:/minecraft/banned-players.json
     restart: no
     user: "0:0"
     tty: true

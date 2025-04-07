@@ -2,11 +2,6 @@ FROM openjdk:21-slim
 
 WORKDIR /minecraft
 
-RUN apt-get update && \
-    apt-get install -y wget && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
 COPY ./config /minecraft/config/
 COPY ./mods /minecraft/mods/
 COPY ./server.jar /minecraft/server.jar
