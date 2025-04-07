@@ -21,14 +21,17 @@ COPY ./server-icon.png /minecraft/server-icon.png
 # Exposer le port Minecraft
 EXPOSE 25565
 
+# Script de démarrage pour copier les fichiers meta au démarrage
+RUN echo '#!/bin/bash \n\
+cp -n /minecraft/meta/* /minecraft/ 2>/dev/null || true \n\
+exec java -Xms4G -Xmx7G -jar server.jar nogui' > /minecraft/start.sh && \
+chmod +x /minecraft/start.sh
+
 # Changer les permissions du répertoire et des fichiers pour l'utilisateur minecraft
 RUN chown -R minecraft:minecraft /minecraft && chmod -R 755 /minecraft
 
 # Passer à l'utilisateur minecraft
 USER minecraft
 
-# Vérifier les fichiers avant de démarrer
-RUN ls -la /minecraft
-
-# Lancer le serveur Minecraft
-CMD ["java", "-Xms4G", "-Xmx7G", "-jar", "server.jar", "nogui"]
+# Lancer le serveur Minecraft avec notre script de démarrage
+CMD ["/minecraft/start.sh"]

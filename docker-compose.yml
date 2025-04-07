@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   minecraft:
     build:
@@ -7,5 +9,5 @@ services:
     volumes:
       - /data/minecraft/world:/minecraft/world
       - /data/minecraft/logs:/minecraft/logs
-      - /data/minecraft/meta:/minecraft/
-    restart: no
+      - /data/minecraft/meta:/minecraft/meta
+    restart: unless-stopped
