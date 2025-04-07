@@ -10,5 +10,5 @@ services:
       - /data/minecraft/world:/minecraft/world
       - /data/minecraft/logs:/minecraft/logs
       - /data/minecraft/meta:/minecraft/meta
-    restart: unless-stopped
+    restart: no
     user: "0:0"
