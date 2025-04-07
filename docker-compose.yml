@@ -13,3 +13,5 @@ services:
       - /data/minecraft/meta:/minecraft/meta
     restart: no
     user: "0:0"
+    tty: true
+    stdin_open: true
