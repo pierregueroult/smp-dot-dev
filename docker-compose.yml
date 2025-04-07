@@ -6,6 +6,7 @@ services:
       context: .
     ports:
       - "25565:25565"
+      - "24454:24454/udp"
     volumes:
       - /data/minecraft/world:/minecraft/world
       - /data/minecraft/logs:/minecraft/logs

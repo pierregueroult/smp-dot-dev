@@ -14,6 +14,7 @@ COPY ./eula.txt /minecraft/eula.txt
 COPY ./server-icon.png /minecraft/server-icon.png
 
 EXPOSE 25565
+EXPOSE 24454/udp
 
 RUN echo '#!/bin/bash \n\
 cp -n /minecraft/meta/* /minecraft/ 2>/dev/null || true \n\
