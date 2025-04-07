@@ -11,6 +11,7 @@ COPY ./launch.sh /minecraft/launch.sh
 
 EXPOSE 25565
 EXPOSE 24454/udp
+EXPOSE 25575
 
 RUN chmod +x /minecraft/launch.sh
 
