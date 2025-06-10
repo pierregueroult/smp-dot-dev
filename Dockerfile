@@ -2,8 +2,8 @@ FROM openjdk:21-slim
 
 WORKDIR /minecraft
 
-COPY ./config /minecraft/config/
-COPY ./mods /minecraft/mods/
+# COPY ./config /minecraft/config/
+# COPY ./mods /minecraft/mods/
 COPY ./server.jar /minecraft/server.jar
 COPY ./eula.txt /minecraft/eula.txt
 COPY ./server-icon.png /minecraft/server-icon.png
